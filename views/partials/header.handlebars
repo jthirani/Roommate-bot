@@ -1,0 +1,42 @@
+<header>
+  <nav class="navbar is-transparent" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="#">
+        <h1 class="heading1" style="color:white"><strong>Roommate</h1><h1  style="color:white">Bot</strong></h1>
+      </a>
+
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+
+    <div class="navbar-menu">
+      <div class="navbar-start">
+        <!-- navbar items -->
+        <a class="navbar-item has-text-white">
+          Home
+        </a>
+        <!-- if user is signed in -->
+        {{#if user}}
+        <a class="navbar-item has-text-white">
+          Chores
+        </a>
+        <a class="navbar-item has-text-white">
+          Bills
+        </a>
+        {{/if}}
+      </div>
+
+      <div class="navbar-end">
+        <!-- navbar items -->
+        <a class="navbar-item has-text-white">
+          Log In
+        </a>
+
+      </div>
+    </div>
+  </nav>
+
+</header>

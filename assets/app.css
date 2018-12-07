@@ -1,0 +1,22 @@
+.center {
+  text-align: center
+}
+
+header {
+
+  color:white
+}
+
+footer {
+  color:white
+}
+
+
+body {
+  background-image: url(penn.jpg);
+}
+
+.navbar {
+    background-color: rgb(0,0,0,0.8);
+    background-image: none;
+}
