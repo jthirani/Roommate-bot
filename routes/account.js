@@ -6,7 +6,7 @@ var bodyParser = require('body-parser');
 var isAuthenticated = require('../middleware/isAuthenticated')
 
 // Database
-var Question = require('../models/question');
+var Chore = require('../models/chore');
 var User = require('../models/user');
 
 
@@ -24,7 +24,6 @@ router.post('/signup', function (req, res, next) {
       res.redirect('/');
     } else {
       next(err);
-      // User.find({}, function(err, results) { console.log(results)});
     }
   })
 });
@@ -36,7 +35,6 @@ router.get('/login', function (req, res, next) {
 router.post('/login', function (req, res, next) {
   User.findOne({ username: req.body.username, password: req.body.password }, function (err, user) {
     if (user !== null) {
-      // console.log(user);
       req.session.user = user.username;
       res.redirect('/');
     } else {

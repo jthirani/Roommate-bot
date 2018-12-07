@@ -3,7 +3,7 @@ var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var cookieSession = require('cookie-session');
 const handlebars = require('express-handlebars');
-// var accountRoutes = require('./routes/account.js');
+var accountRoutes = require('./routes/account.js');
 var isAuthenticated = require('./middleware/isAuthenticated');
 
 var app = express();
@@ -25,9 +25,15 @@ app.use(cookieSession({
   maxAge: 24 * 60 * 60 * 1000 // 24 hours
 }))
 
-app.get('/', (req, res) => {
+app.get('/', (req, res, next) => {
   res.render('home', {title: "Roommate", user: req.session.user});
 });
+
+app.use('/account', accountRoutes);
+
+app.use(function (err, req, res, next) {
+  return res.send('ERROR :  ' + err.message)
+})
 
 app.listen(process.env.PORT || 3000, function () {
   console.log('App listening on port ' + (process.env.PORT || 3000))
