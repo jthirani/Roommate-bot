@@ -1,0 +1,65 @@
+<div class="container">
+  <div class="columns">
+    <div class="column is-one-quarter">
+        <br>
+        <h3 style="color:white; text-align:center"class="title"> Activity </h1>
+        <div class="a">
+          <div class="card">
+            <div class="activity card-content a">
+              <ul id="activities">
+              </ul>
+            </div>
+          </div>
+      </div>
+    </div>    
+    <div class="column is-one-quarter">
+        <div class="control" name="model">
+          <br>
+          <h3 style="color:white; text-align:center" class="title"> Add New Chore </h1>
+          <div class="add">
+          <div class="card no">
+            <div class="add card-content">
+              <form id="login-form" class="form" action="" method="post">
+                  <div class="form-group"> 
+                      <label for="chore"><strong>Chore</strong></label><br>
+                      <input type="text" name="chore" id="chore" class="form-control">
+                  </div>
+                  <div class="form-group">
+                      <label for="roommates"><strong>Select Roommates</strong></label><br>
+                      {{#each users}}
+                        <input type="checkbox" name="roommate" value="{{this.username}}"> {{this.username}}<br>
+                      {{/each}}
+                  </div>
+                  <div class="form-group">
+                      <input type="submit" name="submit" class="btn btn-info btn-md" value="Create Chore!">
+                  </div>
+              </form>
+            </div>
+            </div>
+          </div>
+        </div>
+    </div>    
+    <div class="column">
+      <br>
+      <h1  style="color:white; text-align:center" class="title"> All Chores </h1>
+      <div class="chore">
+      <div id="allchores"class="columns is-multiline">
+    
+        {{#each chores}}
+        <div class="column is-half">
+          <div class="card">
+            <div class="card-content">
+              Chore: {{this.choreText}}
+              <br>
+              Roommates: {{this.roommates}}
+              <br>
+              <button style="color:red" data-id={{this._id}}>Delete</button>
+            </div>
+          </div>
+        </div>
+        {{/each}}
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
