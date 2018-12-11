@@ -179,18 +179,9 @@ app.post('/chores', (req, res, next) => {
 });
 
 
-
-
-
-
-
-
-
-
-
-
 app.post('/bills', (req, res, next) => {
   var b = new Bill({billText: req.body.bill, amount: req.body.amount});
+  console.log()
   b.save(function (err, result) {
     if (!err) {
       var a = new Activity({creator: req.session.user, activityType: "created a bill", activityText: req.body.bill, roommates: [req.body.roommate]})
