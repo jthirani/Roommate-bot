@@ -1,4 +1,4 @@
-.center {
+/* .center {
   text-align: center
 }
 
@@ -19,4 +19,97 @@ body {
 .navbar {
     background-color: rgb(0,0,0,0.3);
     background-image: none;
+} */
+
+body {
+  background-image: linear-gradient(to left top, #17a2b8, #14abc4, #12b3d1, #11bcde, #12c5eb);
+  height: 100vh;
 }
+#login .container #login-row #login-column .login-box {
+  margin-top: 120px;
+  max-width: 600px;
+  height: 320px;
+  border: 1px solid #9C9C9C;
+  background-image: linear-gradient(to bottom, #aec1c3, #a9b5b7, #bcc5c6, #cfd5d5, #e3e5e5);
+}
+#login .container #login-row #login-column .login-box #login-form {
+  padding: 20px;
+}
+#login .container #login-row #login-column .login-box #login-form #register-link {
+  margin-top: -85px;
+}
+
+div.activity {
+  height: 600px
+}
+
+div.activity {
+  overflow-y: scroll;
+  
+}
+
+.a {
+  background-color: lightseagreen;
+  color: white;
+}
+
+.chore {
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  background-color: lightcoral;
+  height: 600px;
+  overflow-y: scroll;
+}
+
+.chore1 {
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  background-color: lightgreen;
+  height: 400px;
+  overflow-y: scroll;
+}
+
+.chore2 {
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  background-color: lightyellow;
+  height: 400px;
+  overflow-y: scroll;
+}
+
+#activities {
+  padding-left: 20px;
+}
+
+.add {
+  background-color: lightgreen;
+}
+
+.no {
+  background-color: transparent;
+}
+
+li {
+  list-style-type: circle;
+}
+
+/* nav.navbar a {
+  height: 20px;
+    display:  block;
+    color: white;
+    text-align: center;
+    padding: 16px 16px;
+    text-decoration: none;
+    font-family:Helvetica;
+    font-size:13px;
+}
+
+nav.navbar a:hover {
+  background-color: #111;
+} */

@@ -1,8 +1,8 @@
 <header>
   <nav class="navbar is-transparent" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
-      <a class="navbar-item" href="#">
-        <h1 class="heading1" style="color:white"><strong>Roommate</h1><h1  style="color:white">Bot</strong></h1>
+      <a class="navbar-item text-info" href="#">
+        RoomateOragnizer
       </a>
 
       <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
@@ -12,18 +12,21 @@
       </a>
     </div>
 
+  
+    
+
     <div class="navbar-menu">
       <div class="navbar-start">
         <!-- navbar items -->
-        <a class="navbar-item has-text-white" href='/'>
+        <a class="navbar-item text-info" href='/'>
           Home
         </a>
         <!-- if user is signed in -->
         {{#if user}}
-        <a class="navbar-item has-text-white" href='/chores'>
+        <a class="navbar-item text-info" href='/chores'>
           Chores
         </a>
-        <a class="navbar-item has-text-white" href='/bills'>
+        <a class="navbar-item text-info" href='/bills'>
           Bills
         </a>
         {{/if}}
@@ -31,9 +34,15 @@
 
       <div class="navbar-end">
         <!-- navbar items -->
-        <a class="navbar-item has-text-white">
+        {{#if user}}
+        <a class="navbar-item text-info" href='/account/logout'>
+          Log Out
+        </a>
+        {{else}}
+        <a class="navbar-item text-info" href='/account/login'>
           Log In
         </a>
+        {{/if}}
 
       </div>
     </div>
